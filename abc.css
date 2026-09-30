@@ -1,0 +1,27 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    margin : 0;
+    padding : 0;
+    display: flex;
+}
+.container{
+    margin: auto;
+   
+    height : 100px;
+    width : 40%;
+    background-color: aliceblue;
+    display : grid;
+     grid-template-columns: auto auto;
+     grid-template-rows:auto auto ;
+     grid-gap: 20px;
+     justify-content : center;
+}
+.box{
+    height : 50 px;
+    width : 50 px;
+
+    background-color: coral;
+}

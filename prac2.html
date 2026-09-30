@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        input {
+            padding: 8px;
+            width: 220px;
+            margin-bottom: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+
+    <!-- Name -->
+    <label>Full Name:</label><br>
+    <input type="text" id="name">
+    <div id="nameError" class="error"></div><br>
+
+    <!-- Email -->
+    <label>Email:</label><br>
+    <input type="text" id="email">
+    <div id="emailError" class="error"></div><br>
+
+    <button type="submit">Register</button>
+
+</form>
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+
+    let nameError = document.getElementById("nameError");
+    let emailError = document.getElementById("emailError");
+
+    let valid = true;
+
+    // Clear previous errors
+    nameError.innerHTML = "";
+    emailError.innerHTML = "";
+
+    // Name validation
+    let nameRegex = /^[A-Za-z ]+$/;
+
+    if (name.length < 3) {
+        nameError.innerHTML = "Name must be at least 3 characters long.";
+        valid = false;
+    } 
+    else if (!nameRegex.test(name)) {
+        nameError.innerHTML = "Name can contain only letters and spaces.";
+        valid = false;
+    }
+
+    // Email validation
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+        emailError.innerHTML = "Please enter a valid email address.";
+        valid = false;
+    }
+
+    // If everything is valid
+    return valid;
+}
+</script>
+
+</body>
+</html>

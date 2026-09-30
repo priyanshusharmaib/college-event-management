@@ -1,0 +1,28 @@
+
+ div{
+    width: 300px;
+    height: 100px;
+    background-color: orange;
+    animation-name: my-animation;
+    animation-duration: 10s;
+    position: relative;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+ }
+
+
+
+    /*@keyframes my-animation{
+        from {background-color: orange;}
+        to {background-color: yellow;}
+    }*/
+    @keyframes my-animation
+    {
+    0% { background-color: orange; left: 0px; top: 0px; }
+    25% { background-color: yellow; left: 200px; top: 0px; }
+    50% { background-color: blue; left: 200px; top: 200px; } 
+    
+        
+        
+
+    } 

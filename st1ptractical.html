@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABES Engineering College</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+            background-color: #f4f4f9;
+        }
+
+        img {
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0056b3;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 20px 30px;
+            border: 2px solid #0056b3;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            width: 220px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-btn {
+            margin-top: 20px;
+            background-color: #0078d7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <h1>ABES ENGINEERING COLLEGE</h1>  
+    <img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/dmzf8yle9vzdqyo2emwt" alt="abes logo" width="150" height="150">
+
+    <h1><a href="/home">Home</a></h1>
+    <h2><a href="/contact">Contact Us</a></h2>
+    <h3><a href="/login">Login</a></h3>
+
+    <form action="/login" method="POST">
+        <label for="name">USERNAME:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="password">PASSWORD:</label>
+        <input type="password" id="password" name="password" required>
+
+        <br>
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+</body>
+</html>
